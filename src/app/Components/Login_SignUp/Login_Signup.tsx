@@ -53,6 +53,7 @@ const LoginSignup = () => {
       setPassword("");
       
       setIsSignUp(false);
+      setNewMessage(successMsg);
       // Save user to backend
     } else if (error) {
       if (error.includes("auth/email-already-in-use")) {
