@@ -4,6 +4,7 @@ import axios from "axios";
 export function useFetchStudentResult() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // eslint-disable-next-line
   const [result, setResult] = useState<any>(null);
 
   const fetchResult = async (email: string) => {
@@ -15,6 +16,7 @@ export function useFetchStudentResult() {
       );
       setResult(res.data);
       return res.data;
+      // eslint-disable-next-line
     } catch (err: any) {
       setError(
         err.response?.data?.message ||

@@ -73,7 +73,7 @@ useEffect(() => {
   if (!isSignUp) {
     const msg: string | null = localStorage.getItem("signupMessage");
     if (msg) {
-      setNewMessage(msg);
+      setMessage(msg);
     }
   }
 }, [isSignUp]);

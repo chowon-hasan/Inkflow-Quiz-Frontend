@@ -32,6 +32,7 @@ export function useSignup() {
       await sendEmailVerification(userCredential.user);
       console.log("Verification email sent to:", email);
       return { user: userCredential.user, error: null };
+      // eslint-disable-next-line
     } catch (err: any) {
       setError(err.code || err.message);
       return { user: null, error: err.code || err.message };

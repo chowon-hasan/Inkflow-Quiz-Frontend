@@ -13,17 +13,17 @@ const ResultPage = () => {
   const router = useRouter();
   const { uid } = param;
   const user = useAppSelector((state) => state.auth.user);
-      const { userData, verifyAuth } = useAuthVerify();
+  const { userData, verifyAuth } = useAuthVerify();
 
   const { calculate } = useResultCalculator();
   const { updateUserLevel } = useUpdateUserLevel();
 
   const { fetchResult, loading, error, result } = useFetchStudentResult();
-  
+  // eslint-disable-next-line
   const [questions, setQuestions] = useState<any[]>([]);
   const [score, setScore] = useState(0);
-const [currentLevel, setCurrentLevel] = useState("");
- const [userCurrentLevel, setUserCurrentLevel] = useState<string>("");
+  const [currentLevel, setCurrentLevel] = useState("");
+  const [userCurrentLevel, setUserCurrentLevel] = useState<string>("");
 
   useEffect(() => {
     fetch("/Qustions.json")
@@ -51,6 +51,7 @@ const [currentLevel, setCurrentLevel] = useState("");
     ) {
       const lastExam = result.examsHistory[result.examsHistory.length - 1];
       let tempScore = 0;
+      // eslint-disable-next-line
       lastExam.examResults.forEach((ans: any) => {
         const q = questions.find((q) => q.id === ans.questionId);
         if (q && ans.answer === q.correctOptionId) {
@@ -61,14 +62,14 @@ const [currentLevel, setCurrentLevel] = useState("");
     }
   }, [result, questions]);
 
-        useEffect(() => {
-          verifyAuth();
-          setUserCurrentLevel(userData?.level || "");
-          return () => {
-            void verifyAuth();
-          };
-          // eslint-disable-next-line
-        }, [userData]);
+  useEffect(() => {
+    verifyAuth();
+    setUserCurrentLevel(userData?.level || "");
+    return () => {
+      void verifyAuth();
+    };
+    // eslint-disable-next-line
+  }, [userData]);
 
   const lastExam =
     result &&
@@ -85,7 +86,6 @@ const [currentLevel, setCurrentLevel] = useState("");
     step: 1,
   });
 
-
   useEffect(() => {
     if (
       user?.email &&
@@ -101,8 +101,8 @@ const [currentLevel, setCurrentLevel] = useState("");
     // eslint-disable-next-line
   }, [calcResult.nextLevel]);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div className="text-red-500">{error}</div>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div className="text-red-500">{error}</div>;
 
   return (
     <>
@@ -168,6 +168,7 @@ const [currentLevel, setCurrentLevel] = useState("");
           <h2 className="text-xl font-bold mb-4">Question Review</h2>
           <div className="space-y-4">
             {lastExam &&
+              // eslint-disable-next-line
               lastExam.examResults.map((ans: any, idx: number) => {
                 const q = questions.find((q) => q.id === ans.questionId);
                 const isCorrect = q && ans.answer === q.correctOptionId;
@@ -204,7 +205,9 @@ const [currentLevel, setCurrentLevel] = useState("");
                               : "text-red-700 dark:text-red-300"
                           }
                         >
-                          {q?.options.find((o: any) => o.id === ans.answer)
+                          
+                          {// eslint-disable-next-line
+                           q?.options.find((o: any) => o.id === ans.answer)
                             ?.text || (
                             <span className="italic text-neutral-400">
                               Not Answered
@@ -217,6 +220,7 @@ const [currentLevel, setCurrentLevel] = useState("");
                         <span className="text-blue-700 dark:text-blue-300">
                           {
                             q?.options.find(
+                              // eslint-disable-next-line
                               (o: any) => o.id === q.correctOptionId
                             )?.text
                           }

@@ -5,14 +5,14 @@ const ReadmePage = () => {
     <div className="bg-gray-900 text-white min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-6 border-b border-gray-700 pb-4">Inkflow Quiz Frontend</h1>
-        <p className="text-lg mb-6">This is the frontend for the Inkflow Quiz application, a web-based platform for users to take quizzes and assess their knowledge across different levels. It's built with Next.js, React, Redux, and Firebase, providing a modern and responsive user experience.</p>
+        <p className="text-lg mb-6">This is the frontend for the Inkflow Quiz application, a web-based platform for users to take quizzes and assess their knowledge across different levels. It&apos;s built with Next.js, React, Redux, and Firebase, providing a modern and responsive user experience.</p>
 
         <h2 className="text-3xl font-bold mb-4 mt-8 border-b border-gray-700 pb-2">Features</h2>
         <ul className="list-disc list-inside space-y-2 mb-6">
           <li><strong>User Authentication:</strong> Secure user registration and login with email and password, including email verification.</li>
           <li><strong>Level-Based Assessments:</strong> A structured quiz system with multiple levels (Alpha, Sigma, Merit) that unlock progressively.</li>
           <li><strong>Interactive Quiz Interface:</strong> A user-friendly interface for taking quizzes with multiple-choice questions.</li>
-          <li><strong>Automated Result Calculation:</strong> Instant feedback with score and percentage calculation to determine user's performance and progression.</li>
+          <li><strong>Automated Result Calculation:</strong> Instant feedback with score and percentage calculation to determine user&apos;s performance and progression.</li>
           <li><strong>State Management:</strong> Centralized state management using Redux Toolkit for a predictable and maintainable application state.</li>
           <li><strong>Firebase Integration:</strong> Utilizes Firebase for backend services like authentication and data storage.</li>
         </ul>
@@ -35,7 +35,7 @@ const ReadmePage = () => {
           <li><code>src/app/Components</code>: Contains all the React components, categorized by feature (e.g., <code>Homepage</code>, <code>Login_SignUp</code>).</li>
           <li><code>src/app/Hooks</code>: Houses custom React hooks that encapsulate business logic for features like authentication, data fetching, and form submissions.</li>
           <li><code>src/app/lib</code>: Includes the Firebase configuration and initialization.</li>
-          <li><code>src/app/Redux_Store</code>: Manages the application's state with Redux Toolkit, including the store and slices.</li>
+          <li><code>src/app/Redux_Store</code>: Manages the application&apos;s state with Redux Toolkit, including the store and slices.</li>
           <li><code>src/app/assessment</code>: Contains the dynamic pages for the quiz and the result display.</li>
           <li><code>public</code>: Stores static assets, such as the <code>Qustions.json</code> file which contains the quiz questions.</li>
         </ul>

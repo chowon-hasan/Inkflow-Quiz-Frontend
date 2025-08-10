@@ -50,12 +50,12 @@ const BUTTON_CONFIG: Record<
   Sigma: {
     text: "Proceed to Sigma Assessment",
     color: "bg-purple-600 hover:bg-purple-700 text-white",
-    link: (uid) => `/readme`,
+    link: () => `/readme`,
   },
   Merit: {
     text: "Take Final Assessment",
     color: "bg-yellow-500 hover:bg-yellow-600 text-white",
-    link: (uid) => `/`,
+    link: () => `/`,
   },
 };
 

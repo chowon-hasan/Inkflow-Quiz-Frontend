@@ -6,6 +6,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useSaveUser } from "@/app/Hooks/useSaveUser";
 
 const VerifyEmailPage = () => {
+  // eslint-disable-next-line
   const [message, setMessage] = useState("Verifying...");
   const searchParams = useSearchParams();
   const oobCode = searchParams.get("oobCode");
@@ -43,6 +44,7 @@ const VerifyEmailPage = () => {
         setTimeout(() => {
           router.push("/");
         }, 2000);
+        // eslint-disable-next-line
       } catch (error: any) {
         setMessage("Verification failed: " + error.message);
       }

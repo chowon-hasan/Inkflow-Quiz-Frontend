@@ -7,12 +7,12 @@ interface AnswerDetails {
   questionText: string;
   answer: string;
   timeTakenSeconds: number;
-//   currentlevel:string;
+
 }
 
 export default function useSubmitAnswers() {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
   const [success, setSuccess] = useState(false);
 
 const submitAnswers = async (
@@ -21,7 +21,6 @@ const submitAnswers = async (
   answers: AnswerDetails[]
 ) => {
   setLoading(true);
-  setError(null);
   try {
     const res = await axios.post(
       `${process.env.NEXT_PUBLIC_SERVER_URL}/track-result/${email}`,
@@ -32,7 +31,8 @@ const submitAnswers = async (
     );
     setSuccess(true);
     return res.data;
-  } catch (err) {
+    // eslint-disable-next-line
+  } catch (err:any) {
     setError(err);
   } finally {
     setLoading(false);

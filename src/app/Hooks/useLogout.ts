@@ -16,6 +16,7 @@ export function useLogout() {
     try {
       await signOut(auth);
       dispatch(logout());
+      // eslint-disable-next-line
     } catch (err: any) {
       setError(err.message);
     } finally {

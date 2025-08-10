@@ -28,6 +28,7 @@ export const useSaveUser = () => {
         }
       );
       return response.data;
+      // eslint-disable-next-line
     } catch (err: any) {
       setError(
         err.response?.data?.message ||

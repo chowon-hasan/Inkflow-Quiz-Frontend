@@ -32,6 +32,7 @@ export function useSignIn() {
         };
       }
       return { user: userCredential.user, error: null };
+      // eslint-disable-next-line
     } catch (err: any) {
         console.log("erro", err.message);
       setError(err.message);

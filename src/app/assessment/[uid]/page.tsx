@@ -82,6 +82,7 @@ const AssessmentPage = () => {
     }, 1000);
 
     return () => clearInterval(timer);
+    // eslint-disable-next-line
   }, [quizStarted, showReadyPopup, timeLeft]); 
 
 

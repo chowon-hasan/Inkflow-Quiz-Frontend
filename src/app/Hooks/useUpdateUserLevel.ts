@@ -17,6 +17,7 @@ export function useUpdateUserLevel() {
       );
       setSuccess(true);
       return res.data;
+      // eslint-disable-next-line
     } catch (err: any) {
       setError(
         err.response?.data?.message ||

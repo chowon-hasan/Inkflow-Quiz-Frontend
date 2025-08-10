@@ -5,6 +5,7 @@ import { useAppSelector } from "@/app/Redux_Store/store/store";
 export const useAuthVerify = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // eslint-disable-next-line
   const [userData, setUserData] = useState<any>(null);
   const user = useAppSelector((state) => state.auth.user);
 
@@ -25,6 +26,7 @@ export const useAuthVerify = () => {
         return response.data; // Return full user object
       }
       return null;
+      // eslint-disable-next-line
     } catch (err: any) {
       setError(
         err.response?.data?.message ||

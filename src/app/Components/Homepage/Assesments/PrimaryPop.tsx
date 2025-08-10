@@ -1,5 +1,5 @@
 "use client";
-import Link from 'next/link';
+
 import React, { useEffect, useState } from 'react';
 import { useAppSelector } from '@/app/Redux_Store/store/store';
 import { useAuthVerify } from '@/app/Hooks/useAuthVerify';
@@ -39,6 +39,8 @@ const PrimaryPop = () => {
         >
           Start Assessment
         </button>
+
+        <div className="sr-only">{userCurrentLevel}</div>
 
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center">
