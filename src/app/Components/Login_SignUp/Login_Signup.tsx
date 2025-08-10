@@ -13,7 +13,7 @@ const LoginSignup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState<string | null>("");
-  const [newMessage, setNewMessage] = useState();
+  const [newMessage, setNewMessage] = useState<string>();
   const { signupWithEmail } = useSignup();
   const { signInWithEmail } = useSignIn();
   const dispatch = useAppDispatch();
@@ -71,7 +71,7 @@ const LoginSignup = () => {
 
 useEffect(() => {
   if (!isSignUp) {
-    const msg: string | null = localStorage.getItem("signupMessage");
+    const msg = localStorage.getItem("signupMessage");
     if (msg) {
       setMessage(msg);
     }
