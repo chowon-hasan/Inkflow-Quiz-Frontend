@@ -23,8 +23,7 @@ export default function Home() {
       setLoading(false);
     };
     checkVerification();
-    // eslint-disable-next-line
-  }, [user]);
+  }, [user, verifyAuth]);
 
   return (
     <ProviderWrapper>
