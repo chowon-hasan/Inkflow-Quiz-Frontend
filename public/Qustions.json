@@ -1,0 +1,45 @@
+{
+  "levels": [
+    {
+      "level": "A1",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the capital of France?",
+          "options": [
+            { "id": "a", "text": "Berlin" },
+            { "id": "b", "text": "Madrid" },
+            { "id": "c", "text": "Paris" },
+            { "id": "d", "text": "Rome" }
+          ],
+          "correctOptionId": "c",
+          "marks": 5
+        },
+        {
+          "id": 2,
+          "question": "Choose the correct form: She ___ to school every day.",
+          "options": [
+            { "id": "a", "text": "go" },
+            { "id": "b", "text": "goes" },
+            { "id": "c", "text": "going" },
+            { "id": "d", "text": "gone" }
+          ],
+          "correctOptionId": "b",
+          "marks": 5
+        },
+        {
+          "id": 3,
+          "question": "Which one is a fruit?",
+          "options": [
+            { "id": "a", "text": "Carrot" },
+            { "id": "b", "text": "Potato" },
+            { "id": "c", "text": "Apple" },
+            { "id": "d", "text": "Onion" }
+          ],
+          "correctOptionId": "c",
+          "marks": 5
+        }
+      ]
+    }
+  ]
+}
